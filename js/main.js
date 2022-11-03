@@ -15,7 +15,7 @@ for(let i = 1; i <= 100; i++){
     boardCell.classList.add("board-number");
 
     
-    //Evento click
+    //Evento click cell
     boardCell.addEventListener("click", function(){
         
         this.classList.add("cell-color");
@@ -39,6 +39,15 @@ for(let i = 1; i <= 100; i++){
 
     boardContainer.append(boardCell);
 }
+
+//Evento click restart game
+const restartBtn = document.getElementById("btn");
+
+restartBtn.addEventListener("click", function(){
+
+    location.reload(); 
+    
+})
 
 
 
