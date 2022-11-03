@@ -6,6 +6,9 @@ const bombArray = [];
 
 const boardContainer = document.querySelector(".board");
 
+
+createBombArray();
+
 for(let i = 1; i <= 100; i++){
     const boardCell = document.createElement("div");
     boardCell.innerHTML = i;
@@ -15,14 +18,22 @@ for(let i = 1; i <= 100; i++){
     boardCell.addEventListener("click", function(){
         
         this.classList.add("cell-color");
-        console.log(this.innerHTML);
+        let clickedCell = Number(this.innerHTML);
+
+        //Controlla se e' presente la cella cliccata all'interno dell'array delle bombe
+        if(bombArray.includes(clickedCell)){
+            this.classList.add("bomb");
+        }
+        
+    
     })
 
     boardContainer.append(boardCell);
 }
 
 
-createBombArray();
+
+
 
 
 
@@ -55,8 +66,6 @@ function createBombArray(){
 
         console.log(bombArray[i]);
     }
-
-    
 }
 
 
