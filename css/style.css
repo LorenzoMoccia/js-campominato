@@ -66,4 +66,5 @@ footer{
     color: yellow;
     font-size: 30px;
     margin-bottom: 100px;
+    cursor: pointer;
 }
