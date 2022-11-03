@@ -27,13 +27,24 @@ createBombArray();
 
 
 
+
+
 //Crea un array di 16 numeri random da 1 a 100 ----> Bombe
 function createBombArray(){
     const arrayLength = 16;
 
     for(let i = 0; i < arrayLength; i++){
         bombArray.push(Math.floor(Math.random() * 100) + 1);
+
+        if(bombArray[i] === bombArray[i]){
+            bombArray.splice(i);
+            bombArray.push(Math.floor(Math.random() * 100) + 1);
+        }
+
+        console.log(bombArray[i]);
     }
+
+    
 }
 
 
