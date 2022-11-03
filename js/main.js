@@ -2,7 +2,7 @@
 
 //Dichiaro un array per le bombe
 const bombArray = [];
-
+let score = 0;
 
 const boardContainer = document.querySelector(".board");
 
@@ -23,6 +23,11 @@ for(let i = 1; i <= 100; i++){
         //Controlla se e' presente la cella cliccata all'interno dell'array delle bombe
         if(bombArray.includes(clickedCell)){
             this.classList.add("bomb");
+            document.getElementById("score-text").innerHTML = "Hai perso!!";
+        }
+        else{
+            score++;
+            document.getElementById("score-text").innerHTML = "Score: " + score;
         }
         
     
@@ -34,11 +39,7 @@ for(let i = 1; i <= 100; i++){
 
 
 
-
-
-
-
-
+//-------------------------FUNCTIONS--------------------//
 
 //Crea un array di 16 numeri random da 1 a 100 ----> Bombe
 function createBombArray(){

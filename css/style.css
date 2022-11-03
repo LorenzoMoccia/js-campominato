@@ -51,3 +51,9 @@ footer{
 .bomb{
     background-color: red;
 }
+
+.score{
+    background-color: aqua;
+    text-align: center;
+}
+
