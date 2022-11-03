@@ -1,0 +1,48 @@
+/*--------------
+    RESET
+----------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+header{
+    padding: 1rem;
+}
+
+main{
+    background-color: aqua;
+    flex-grow: 1;
+    display: flex;
+}
+
+footer{
+    padding: 1rem;
+}
+
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 31.25rem;
+    width: 31.25rem;
+    margin: auto;
+}
+
+.board-number{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+}
+
+.cell-color{
+    background-color: lightblue;
+}
