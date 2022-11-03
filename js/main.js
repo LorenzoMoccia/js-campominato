@@ -14,6 +14,7 @@ for(let i = 1; i <= 100; i++){
     boardCell.innerHTML = i;
     boardCell.classList.add("board-number");
 
+    
     //Evento click
     boardCell.addEventListener("click", function(){
         
@@ -23,7 +24,10 @@ for(let i = 1; i <= 100; i++){
         //Controlla se e' presente la cella cliccata all'interno dell'array delle bombe
         if(bombArray.includes(clickedCell)){
             this.classList.add("bomb");
-            document.getElementById("score-text").innerHTML = "Hai perso!!";
+            document.getElementById("score-text").innerHTML = "BOOM! HAI PERSO! Punteggio: " + score;
+            const element = document.getElementById("board-id");
+            element.remove();
+            
         }
         else{
             score++;
