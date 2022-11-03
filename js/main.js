@@ -1,5 +1,9 @@
 "use strict";
 
+//Dichiaro un array per le bombe
+const bombArray = [];
+
+
 const boardContainer = document.querySelector(".board");
 
 for(let i = 1; i <= 100; i++){
@@ -16,3 +20,21 @@ for(let i = 1; i <= 100; i++){
 
     boardContainer.append(boardCell);
 }
+
+
+createBombArray();
+
+
+
+
+//Crea un array di 16 numeri random da 1 a 100 ----> Bombe
+function createBombArray(){
+    const arrayLength = 16;
+
+    for(let i = 0; i < arrayLength; i++){
+        bombArray.push(Math.floor(Math.random() * 100) + 1);
+    }
+}
+
+
+
